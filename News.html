@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="stylenews.css">
+</head>
+ <!-- Body -->
+ <body id="bgbody">
+
+
+
+    <!-- navbar -->
+
+    <div class="navbar">
+    <a href="file:///E:/PROJECTS/index.html" id="home">Home</a>
+    <a href="file:///E:/PROJECTS/News.html" id="news" class="active"> News</a>
+    <a href="#" id="contact">Contact</a>
+    <a href="file:///E:/PROJECTS/About.html" id="about">About</a>
+    <a href="#" id="signin">SignUp</a>
+    <a href="#" id="login">Login</a>
+    </div>
+
+    <!--SideBars-->
+
+    <div id="sidebar1">
+        
+            <h3 id="dashboard">DashBoard</h3>
+        <br><br><br>
+        <a href="#" id="dashcontent1">Marks</a>
+        <a href="#" id="dashcontent2">Profile</a>
+        <a href="#" id="dashcontent3">Settings</a>
+        <a href="#" id="dashcontent4">Logout</a>
+
+    </div>
+
+    <!--Logo-->
+ <div id="bg">
+        <center id="center"><img src="student-logo.png" alt="logo.png" width="80px" height="80px">
+
+        <!--Title Heading-->
+        
+        <h1 id="title">Student Portal</h1></center>
+
+
+        <!-- news this month -->
+
+        <h2 id="newsthismonth">-News This Month:</h2>
+        <ul class="no"> <li>
+            Universities must end online healthcare courses</li></ul>
+             <p class="data">The University Grants Commission (UGC) has ordered that from July 2025, all healthcare and
+                 allied programs offered under the National Commission for Allied and Healthcare Professions (NCAHP) must be discontinued in
+                 online or Open & Distance Learning (ODL) formats.</p>
+
+                 <br><br>
+
+                 <ul class="no"><li>Delhi brings private schools under fee regulation law</li></ul>
+                 <p class="data">The Delhi government has placed all 1,700 private schools under a new fee regulation policy. Parents now have veto power over proposed fee hikes.</p>
+
+                 <br><br>
+
+                 <ul class="no"><li>Schools and colleges shut down for two days in Azad Kashmir</li></ul>
+
+
+           <p class="data">Due to heavy rainfall, landslides, and a cloudburst, all educational institutions in Azad Jammu & Kashmir have been closed for two days as a safety precaution.</p>
+
+               <br><br>
+
+           <ul class="no"><li>Punjab mandates private schools to educate 10% of students for free</li></ul>
+
+           <p class="data">The Punjab Education Department has instructed private schools to provide <b>free education to at least 10% </b> of their students,
+             prioritizing children from low-income families and those with special needs. The initiative also includes
+              plans for dedicated autism schools</p>
+
+              <br><br>
+
+              <ul class="no"><li>Phased reopening of schools after extended summer break</li></ul>
+              <p class="data">Though summer vacation in Punjab was extended till August 31 due to extreme heat,
+                 the government ordered the <b> partial reopening starting August 18</b> for higher grades (9–12 and O/A Levels),
+                  while grades 1–8 remain closed</p>
+
+                  <br><br>
+
+                  <ul class="no"><li>Alarming scale of out-of-school children</li></ul>
+                  <p class="data">A report by Allama Iqbal Open University revealed that Pakistan has around <b> 25.37 million children aged 5–16</b> who are out of school,
+                     emphasizing the critical role of non-formal education (NFE) in bridging this gap</p>
+
+     </div>
+
+        <!--Main Content-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--  Current Tab Active banane ke liye  -->
+
+
+
+        <script>
+            // Saare navbar links select karo
+            const links = document.querySelectorAll('.navbar a');
+            const currentPath = window.location.pathname.split("/").pop(); // sirf file ka naam milega
+        
+            links.forEach(link => {
+                if (link.getAttribute("href").includes(currentPath) && currentPath !== "") {
+                    link.classList.add('active');
+                }
+            });
+        </script>
+    
+
+
+
+
+    
+</body>
+</html>

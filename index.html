@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's Registeration</title>
+    <link rel="stylesheet" href="Style2.css">
+</head>
+
+<!-- Body -->
+<body id="bgbody">
+
+
+    <!--Animations-->
+
+    <div class="bgani">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- navbar -->
+
+    <div class="navbar">
+    <a href="file:///E:/PROJECTS/index.html" id="home" class="active">Home</a>
+    <a href="file:///E:/PROJECTS/News.html" id="news">News</a>
+    <a href="#" id="contact">Contact</a>
+    <a href="file:///E:/PROJECTS/About.html" id="about">About</a>
+    <a href="#" id="signin">SignUp</a>
+    <a href="#" id="login">Login</a>
+    </div>
+
+    <!--SideBars-->
+
+    <div id="sidebar1">
+        
+            <h3 id="dashboard">DashBoard</h3>
+        <br><br><br>
+        <a href="#" id="dashcontent1">Marks</a>
+        <a href="#" id="dashcontent2">Profile</a>
+        <a href="#" id="dashcontent3">Settings</a>
+        <a href="#" id="dashcontent4">Logout</a>
+
+    </div>
+
+    <!--Logo-->
+      <div id="bg">
+        <img src="student-logo.png" alt="logo.png" width="43px" height="43px">
+
+        <!--Title Heading-->
+        
+        <h1 id="title">Student Portal</h1>
+
+        <!--Main Content-->
+
+        <form id="studentForm">
+
+            <label for="student name" id="student1">Student Name:</label><br>
+            <br><label for="first name">First Name (required):</label>
+            <input type="text" placeholder="First name" required class="fname">
+            <br><br>
+            <label for="middle name">Middle name (optional):</label>
+            <input type="text" placeholder="Middle name" class="fname">
+            <br><br>
+            <label for="last name">Last Name (required):</label>
+            <input type="text" placeholder="Last name" required class="fname">
+
+            <br><br><br>
+
+            <label for="grade" id="student2">Grade:</label>
+
+            <select name="grade" id="grades">
+
+                <option value="Select Grade" class="opt">Select Grade</option>
+                <option value="1" class="opt">1</option>
+                <option value="2" class="opt">2</option>
+                <option value="3" class="opt">3</option>
+                <option value="4" class="opt">4</option>
+                <option value="5" class="opt">5</option>
+                <option value="6" class="opt">6</option>
+                <option value="7" class="opt">7</option>
+                <option value="8" class="opt">8</option>
+                <option value="9" class="opt">9</option>
+                <option value="10" class="opt">10</option>
+
+            </select>
+            
+            <br><br>
+            <label for="gender" id="student3">Gender:</label>
+
+            <br><br>
+
+            <label for="male" id="male">Male</label>
+            <input type="radio" name="male" id="male">
+            <label for="female" id="female">Female</label>
+            <input type="radio" name="female" id="female">
+
+            <br><br>
+            
+
+            <label for="sports" id="student4">Sports Participated:</label>
+
+            <br>
+
+            <input type="checkbox" id="cricket" name="cricket">
+            <label for="cricket">Cricket</label>
+
+            <br>
+
+            <input type="checkbox" id="bm" name="bm">
+            <label for="bm">Badmintion</label>
+
+            <br>
+
+            <input type="checkbox" id="hockey" name="hockey">
+            <label for="hockey">Hockey</label>
+
+            <br>
+
+            <input type="checkbox" id="fb" name="fb">
+            <label for="fb">Football</label>
+
+            <br><br><br>
+
+            <input type="submit" id="button1">
+
+            <input type="reset" id="button2">
+
+        </form>
+
+
+    </div>
+
+
+<!--  Current Tab Active banane ke liye  -->
+
+
+
+<script>
+    // Saare navbar links select karo
+    const links = document.querySelectorAll('.navbar a');
+    const currentPath = window.location.pathname.split("/").pop(); // sirf file ka naam milega
+
+    links.forEach(link => {
+        if (link.getAttribute("href").includes(currentPath) && currentPath !== "") {
+            link.classList.add('active');
+        }
+    });
+</script>
+
+
+
+
+
+<script>
+    document.getElementById("studentForm").addEventListener("submit", function(e){
+        e.preventDefault(); // page reload na ho
+    
+        // Random confirmation ID generate karo
+        let id = "#099D" + Math.floor(Math.random() * 9000 + 1000).toString();
+    
+        // Naya page open karo
+        let newWin = window.open("", "_blank");
+    
+        // Us page me content inject karo
+        newWin.document.write(`
+          <html>
+          <head>
+            <title>Form Submitted</title>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(135deg, #232526, #414345);
+                color: white;
+                text-align: center;
+                padding-top: 100px;
+              }
+              .box {
+                background: rgba(255,255,255,0.08);
+                padding: 30px 50px;
+                border-radius: 15px;
+                display: inline-block;
+                box-shadow: 0 0 20px rgba(0,0,0,0.5);
+              }
+
+              #check {
+                color:green;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="box">
+              <h1> <b id="check"> ✔ </b> Thanks for submitting your form!</h1>
+              <p>Your confirmation number is:</p>
+              <h2>${id}</h2>
+            </div>
+          </body>
+          </html>
+        `);
+    });
+    </script>
+    
+
+    
+
+    <!--footer-->
+
+    
+    
+</body>
+<footer id="awais">@Awais_Portal</footer>
+</html>
