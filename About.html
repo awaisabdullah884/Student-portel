@@ -17,9 +17,9 @@
 
      <div class="navbar">
         <a href="file:///E:/PROJECTS/index.html" id="home">Home</a>
-        <a href="file:///E:/PROJECTS/News.html" id="news" class="active"> News</a>
-        <a href="#" id="contact">Contact</a>
-        <a href="#" id="about">About</a>
+        <a href="file:///E:/PROJECTS/News.html" id="news"> News</a>
+        <a href="file:///E:/PROJECTS/code.html" id="contact">`Code`</a>
+        <a href="file:///E:/PROJECTS/About.html" id="about">About</a>
         <a href="#" id="signin">SignUp</a>
         <a href="#" id="login">Login</a>
         </div>
@@ -38,11 +38,41 @@
         </div>
 
 
-        <div id="bg">
-            <h1>Hello
-            </h1>
-        </div>
+       <center> <div id="bg">
+            <h3><b> About us</b></h3>
+            <p>Welcome to the <b> Student Registration & Marks Management System</b></p>
+            <br><br>
+            <p>Our platform is designed to simplify the way students and teachers manage academic records</p>
+            <br><br>
+            <ul><li>📌 For Students – Easily register, view your marks, and stay updated with the latest announcements</li>
+            <li>📌 For Teachers/Admins – Manage student data, upload marks, and track progress efficiently.</li>
+        <li>📌 Our Mission – To make educational processes digital, transparent, and accessible for everyone.</li></ul>
+
+        <br><br><br>
+        <p><i>We are constantly working to improve this system and bring more useful features to support learning and teaching</i> </p>
+                
+            </div></center>
+
+<!--  Current Tab Active banane ke liye  -->
+
+
+<script>
+    // Saare navbar links select karo
+    const links = document.querySelectorAll('.navbar a');
+    const currentPath = window.location.pathname.split("/").pop(); // sirf file ka naam milega
     
+    links.forEach(link => {
+        const linkPath = link.getAttribute("href").split("/").pop(); // sirf file ka naam nikalo
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+        }
+    });
+    
+    </script>
+
+
+
+
 
 
 </body>

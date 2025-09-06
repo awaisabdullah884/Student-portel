@@ -16,8 +16,8 @@
 
     <div class="navbar">
     <a href="file:///E:/PROJECTS/index.html" id="home">Home</a>
-    <a href="file:///E:/PROJECTS/News.html" id="news" class="active"> News</a>
-    <a href="#" id="contact">Contact</a>
+    <a href="file:///E:/PROJECTS/News.html" id="news"> News</a>
+    <a href="file:///E:/PROJECTS/code.html" id="contact">`Code`</a>
     <a href="file:///E:/PROJECTS/About.html" id="about">About</a>
     <a href="#" id="signin">SignUp</a>
     <a href="#" id="login">Login</a>
@@ -92,36 +92,21 @@
         <!--Main Content-->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!--  Current Tab Active banane ke liye  -->
 
-
-
-        <script>
-            // Saare navbar links select karo
-            const links = document.querySelectorAll('.navbar a');
-            const currentPath = window.location.pathname.split("/").pop(); // sirf file ka naam milega
-        
-            links.forEach(link => {
-                if (link.getAttribute("href").includes(currentPath) && currentPath !== "") {
-                    link.classList.add('active');
-                }
-            });
-        </script>
-    
-
+    <script>
+        // Saare navbar links select karo
+     const links = document.querySelectorAll('.navbar a');
+     const currentPath = window.location.pathname.split("/").pop(); // sirf file ka naam milega
+     
+     links.forEach(link => {
+         const linkPath = link.getAttribute("href").split("/").pop(); // sirf file ka naam nikalo
+         if (linkPath === currentPath) {
+             link.classList.add('active');
+         }
+     });
+     
+     </script>
 
 
 

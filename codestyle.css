@@ -1,0 +1,172 @@
+/* Body */
+/* Background area for form  +  Background Animation (color changing) content 50% */
+#bgbody{
+    background:linear-gradient(270deg,rgb(0, 0, 0), rgb(33, 34, 34), rgb(22, 20, 20));
+    background-size: 400% 400%;
+    margin: auto;
+    animation-name: animation;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-duration: 13s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+/* Background Animation (color changing) content other 50% */
+@keyframes animation {
+    0%{background-position:0% 50% ;}
+    50%{background-position:100% 50% ;}
+    100%{background-position:0% 50% ;}
+  }
+
+
+
+
+  /* NavBar content */
+
+.navbar{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: auto;
+    padding-right: auto;
+    background:  black;
+    margin:0;
+    overflow: hidden;
+    box-shadow:0 0 5px black;
+    
+}
+
+
+
+
+#home{
+    font-size: large;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1%;
+    justify-content: center;
+    justify-items: auto;
+    color: white;
+    float: left;
+    text-decoration: none;
+    text-shadow: 0 0 10px white;
+    border-color: 10px grey;
+}
+#home:hover{
+    background: white;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 5px black;
+}
+.navbar a.active{
+    background: green;
+    color: gold;
+    text-shadow: 0 0 2px white;
+}
+
+#news{
+    font-size: large;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 1%;
+    float: left;
+    text-decoration: none;
+    text-shadow: 0 0 10px white;
+}
+#news:hover{
+    background: white;
+    color: black;
+    text-shadow: 0 0 5px black;
+}
+
+
+#contact{
+    font-size: large;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 1%;
+    float: left;
+    text-decoration: none;
+    text-shadow: 0 0 10px white;
+}
+
+#contact:hover{
+    background: white;
+    color: black;
+    text-shadow: 0 0 5px black;
+}
+
+
+#about{
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: white;
+    padding: 1%;
+    float: left;
+    text-decoration: none;
+    text-shadow: 0 0 10px white;
+}
+
+#about:hover{
+    background: white;
+    color: black;
+    text-shadow: 0 0 5px black;
+}
+
+
+
+#signin{
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: gold;
+    padding: 1%;
+    float: Right;
+    text-decoration: none;
+    text-shadow: 0 0 10px gold;
+}
+
+#signin:hover{
+    background: ghostwhite;
+    color: gold;
+    text-shadow: 0 0 10px gold;
+}
+
+
+#login{
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: gold;
+    padding: 1%;
+    float: right;
+    text-shadow: 0 0 10px gold;
+    text-decoration: none;
+}
+
+
+#login:hover{
+    background: white;
+    color: gold;
+    text-shadow: 0 0 10px gold;
+}
+
+
+
+/* bg img of basic layout */
+
+#bgimg{
+    margin-top: 20px;
+    position:sticky;
+}
+
+
+
+
+/* Js Script style */
+
+
+
