@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Code to Develop</title>
+    <link rel="stylesheet" href="codestyle.css">
+</head>
+<body>
+
+
+    <!-- Body -->
+<body id="bgbody">
+
+
+     <!-- navbar -->
+
+     <div class="navbar">
+        <a href="file:///E:/PROJECTS/index.html" id="home">Home</a>
+        <a href="file:///E:/PROJECTS/News.html" id="news">News</a>
+        <a href="file:///E:/PROJECTS/code.html" id="contact">`U_C`</a>
+        <a href="file:///E:/PROJECTS/About.html" id="about">About</a>
+        <a href="file:///E:/PROJECTS/SignUp.html" id="signin">SignUp</a>
+        <a href="#" id="login">Login</a>
+        </div>
+        <hr><center><h1 id="uc">UNDER   CUNSTRUCTION</h1></center><hr>
+
+
+        <div id="div">
+          <center><p id="p">Our Team is working to improve the content,add new features,and many more. <br>So keep visiting us to stay connected,more features will be added soon <br> THANKS!</p></center>
+        </div>
+    
+       <script>
+    // Saare navbar links select karo
+    const links = document.querySelectorAll('.navbar a');
+    const currentPath = window.location.pathname.split("/").pop(); // sirf file ka naam milega
+    
+    links.forEach(link => {
+        const linkPath = link.getAttribute("href").split("/").pop(); // sirf file ka naam nikalo
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+        }
+    });
+    
+  </script>
+
+
+    
+</body>
+</html>
